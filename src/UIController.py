@@ -4,6 +4,10 @@ from tkinter import ttk
 import HostFinder as hF
 
 
+# todo: think about refactoring this file
+# todo: add style sheet
+# todo: add some kind of auto-copy feature for the list after clicking on item?
+
 # ---------------------------------------------------------------------------------------------------------
 # methods
 # ---------------------------------------------------------------------------------------------------------
@@ -16,6 +20,7 @@ def get_range_from_entry():
         print(e.with_traceback(None))
 
 
+# todo: parse whole ip address
 def parse_range(string):
     result = string.split("-")
     return result
@@ -26,6 +31,7 @@ def update_listbox(content):
         listbox.insert(0, item)
 
 
+# todo: threading does not work, UI get blocked
 def run_search(address_lower, address_upper):
     pool = ThreadPool(processes=1)
     ping_async_result = pool.apply_async(hF.find_hosts_by_pinging, (address_lower, address_upper))

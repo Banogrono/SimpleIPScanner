@@ -4,6 +4,9 @@ import socket
 import subprocess
 
 
+# todo: think about refactoring this file
+
+
 # tcp ports used by Linux, Windows and MacOS
 # ports = [20, 21, 22, 23, 25, 80, 111, 135, 137, 138, 139, 443, 445, 548, 631, 631, 993, 995]
 
